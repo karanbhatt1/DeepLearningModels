@@ -1,0 +1,115 @@
+:root {
+	--bg: #0f172a;
+	--panel: #111827;
+	--text: #e5e7eb;
+	--muted: #94a3b8;
+	--accent: #22c55e;
+	--accent-hover: #16a34a;
+	--danger: #ef4444;
+	--ring: #2563eb33;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+	background: radial-gradient(1200px 800px at 10% 10%, #0b1229, #0f172a 30%, #0b1229 90%);
+	color: var(--text);
+}
+
+.app-header {
+	padding: 32px 20px 8px;
+	text-align: center;
+}
+.app-header h1 {
+	margin: 0 0 8px;
+	font-size: 28px;
+	letter-spacing: 0.3px;
+}
+.app-header p {
+	margin: 0;
+	color: var(--muted);
+}
+
+.container {
+	max-width: 840px;
+	margin: 16px auto 48px;
+	padding: 0 20px;
+}
+
+.uploader {
+	position: relative;
+	border: 2px dashed #334155;
+	border-radius: 16px;
+	padding: 20px;
+	min-height: 260px;
+	display: grid;
+	place-items: center;
+	gap: 16px;
+	background: linear-gradient(180deg, #0b132a, #0b132a), var(--panel);
+}
+.uploader.is-dragover { border-color: #60a5fa; box-shadow: 0 0 0 6px var(--ring) inset; }
+
+.drop-help {
+	text-align: center;
+	color: var(--muted);
+}
+
+#preview {
+	max-width: 100%;
+	max-height: 220px;
+	display: none;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+button {
+	appearance: none;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+#selectButton {
+	background: #1f2937;
+	color: var(--text);
+	border: 1px solid #374151;
+}
+#selectButton:hover { background: #111827; }
+
+.actions { text-align: center; margin-top: 16px; }
+
+#classifyButton {
+	background: var(--accent);
+	color: #052e12;
+	min-width: 120px;
+}
+#classifyButton:hover { background: var(--accent-hover); }
+#classifyButton:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.result { margin-top: 20px; display: grid; gap: 12px; }
+
+.message {
+	padding: 12px 14px;
+	border-radius: 10px;
+	background: #0b1229;
+	border: 1px solid #1f2a44;
+	color: var(--muted);
+}
+.message.error { border-color: #7f1d1d; color: #fecaca; background: #2a0b0b; }
+
+.prediction-card {
+	padding: 16px;
+	border-radius: 12px;
+	background: #0b1229;
+	border: 1px solid #1f2a44;
+	display: grid;
+	gap: 6px;
+}
+.prediction-label { font-size: 20px; font-weight: 700; }
+.prediction-confidence { color: var(--muted); }

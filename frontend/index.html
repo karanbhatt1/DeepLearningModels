@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Citrus Classifier</title>
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+	<header class="app-header">
+		<h1>Citrus Fruit Classification</h1>
+		<p>Upload an image of a citrus fruit and click Classify.</p>
+	</header>
+
+	<main class="container">
+		<section class="uploader" id="dropzone">
+			<input type="file" id="imageInput" accept="image/*" hidden />
+			<div class="drop-help">
+				<button id="selectButton" type="button">Choose Image</button>
+				<span>or drag & drop here</span>
+			</div>
+			<img id="preview" alt="Preview" />
+		</section>
+
+		<div class="actions">
+			<button id="classifyButton" type="button" disabled>Classify</button>
+		</div>
+
+		<section class="result" id="result"></section>
+	</main>
+
+	<script src="./app.js"></script>
+</body>
+</html>
