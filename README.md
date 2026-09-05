@@ -2,7 +2,7 @@
 This Repository Contains Deep Learning models from scratch to the level needed. The code contains all the necessary comments and  readme files contains all the notes. 
 # PROJECT OF DEEP LEARNING WITH CNN:
 ## Dog And Cat Classifier:
-- # Day 1 — Dataset Collection & Project Setup  [Date]05-09-2026 **(Happy Teachers Day)**
+- # Day 1 — Dataset Collection & Project Setup  (05-09-2026) **(Happy Teachers Day)**
 - Collected and Uploaded 809.54MB dataset including 25000 images of cats and dogs.
 - Folder Structure:
     -- Today, I started my **Dog vs Cat Image Classification** project using **TensorFlow/Keras**.
@@ -26,5 +26,3 @@ dataset/
     ├── ...
     └── cat_12500.jpg
 ```
-On Day 2, I will work on **dataset exploration and preprocessing**, including checking image dimensions, identifying corrupted/invalid images, and preparing the dataset for training.
-
