@@ -68,7 +68,9 @@ The increasing gap between training and validation performance, along with the i
 This gave me a practical understanding of overfitting rather than learning it only theoretically.
 ## Experimental Result
 <img src="Screensort/Screenshot 2026-09-10 211053.png" alt="Custom CNN Training Results" width="800"/>
+
 This model will be used as a **baseline** for comparison with the next model.
+
 ## Key Takeaway
 The most important outcome of today's experiment was understanding the complete training process of a CNN — from input images, convolution and feature extraction, to parameter updates, validation, and identifying overfitting.
 The next step will be to train an improved model and compare its performance against this baseline.
