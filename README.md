@@ -67,7 +67,7 @@ In my experiment, training accuracy increased to approximately **90.76%**, while
 The increasing gap between training and validation performance, along with the increase in validation loss during the final epoch, indicated that the model was beginning to **overfit** the training data.
 This gave me a practical understanding of overfitting rather than learning it only theoretically.
 ## Experimental Result
-![Custom CNN Training Results]()
+![Custom CNN Training Results](Screensort/Screenshot 2026-09-10 211053.png)
 This model will be used as a **baseline** for comparison with the next model.
 ## Key Takeaway
 The most important outcome of today's experiment was understanding the complete training process of a CNN — from input images, convolution and feature extraction, to parameter updates, validation, and identifying overfitting.
