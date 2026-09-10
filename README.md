@@ -26,3 +26,9 @@ dataset/
     ├── ...
     └── cat_12500.jpg
 ```
+   ## Day 2 - Cleaned the data and training a Custom CNN model: (10-09-2026)
+      - Input -  input of (224,224,3)
+      - Total params: 5,631,169 (21.48 MB)
+      - Trainable params: 5,631,169 (21.48 MB)
+      - Non-trainable params: 0 (0.00 B)
+      - Total No of Epochs : 5
