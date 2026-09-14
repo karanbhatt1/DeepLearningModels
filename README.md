@@ -66,7 +66,9 @@ The experimental training helped me understand the difference between overfittin
 In my experiment, training accuracy increased to approximately **90.76%**, while validation accuracy reached approximately **81.25%**.
 The increasing gap between training and validation performance, along with the increase in validation loss during the final epoch, indicated that the model was beginning to **overfit** the training data.
 This gave me a practical understanding of overfitting rather than learning it only theoretically.
-## Experimental Result
+**Overfitting** : When model performs very well in training process but not so good during testing process is termed as Overfitting where the model is just mugging up not actually learning the weights and biases of model properly.
+
+## 5. Experimental Result
 <img src="Screensort/Screenshot 2026-09-10 211053.png" alt="Custom CNN Training Results" width="800"/>
 
 This model will be used as a **baseline** for comparison with the next model.
@@ -74,3 +76,48 @@ This model will be used as a **baseline** for comparison with the next model.
 ## Key Takeaway
 The most important outcome of today's experiment was understanding the complete training process of a CNN — from input images, convolution and feature extraction, to parameter updates, validation, and identifying overfitting.
 The next step will be to train an improved model and compare its performance against this baseline.
+
+## Day 3 : Another Custom CNN with Regularization to Prevent Overfitting. [14-09-2026]
+
+- **1. What I learned**:
+  
+     1. **Max-Pooling** : It is a downsampling operation used to reduce the spatial dimensions of a feature map by taking the maximum value       from each `n × m` patch.
+  
+  2. **Regularization** : It is a set of techniques used to reduce overfitting and improve the model's ability to generalize to unseen data.
+  
+     - **Dropout** : A regularization technique in which some neurons are randomly deactivated during the training process. This prevents the model from becoming too dependent on particular neurons and can help reduce overfitting.
+     
+     - **L1 Regularization** : Adds a penalty based on the absolute values of the model's weights to the loss function. It can encourage some weights to become zero.
+     
+     - **L2 Regularization** : Adds a penalty based on the squared values of the model's weights to the loss function. It encourages the model to keep weights smaller and can help reduce overfitting.
+  
+  3. **Experiment with Dropout** : I added Dropout layers with different dropout rates to the CNN to investigate whether regularization could reduce the overfitting observed in the baseline CNN.
+  
+  4. **Experimental Result** : The model did not learn effectively and remained around `50%` training and validation accuracy after 10 epochs. This indicated that the model was approximately performing random classification on the balanced dataset.
+<img src="Screensort/day3_cnn.png" alt="Custom CNN Training Results" width="800"/>
+
+
+  5. **Important Learning** : Adding a technique that is intended to improve a model does not automatically make the model better. Regularization needs to be applied appropriately. This experiment helped me understand that some experiments are performed not only to achieve better accuracy, but also to understand how different techniques affect model learning.
+  
+- **Model 2 Architecture**:
+  
+  `Input → Conv2D → MaxPooling → Dropout → Conv2D → MaxPooling → Dropout → Conv2D → MaxPooling → Dropout → Flatten → Dense → Dropout → Output`
+  
+- **Model Parameters And Summary**:
+     <img src="Screensort/summary_2.png" alt="Custom CNN Training Results" width="800"/>
+
+  - Total Parameters: `5,631,169`
+  - Trainable Parameters: `5,631,169`
+  - Non-trainable Parameters: `0`
+  
+- **Model 2 Result**:
+  
+  - Training Accuracy: approximately `50%`
+  - Validation Accuracy: `50%`
+  - The model failed to learn meaningful patterns during the experiment.
+  
+- **Comparison with Day 2 Baseline**:
+     - Baseline model was performing good but there was the problem of overfitting for which I used dropout technique which magnificently affected the model
+     - and output was more worse than before. it was around 50% for accuracy and 50% validation accuracy.
+### Key Takeaway
+> Not every experiment is performed to achieve the best result. Some experiments are performed to understand what works, what does not work, and why.
