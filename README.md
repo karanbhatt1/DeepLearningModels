@@ -107,7 +107,7 @@ This gave me a practical understanding of overfitting rather than learning it on
 
 ## 5. Experimental Result
 
-<img src="Screensort/Screenshot 2026-09-10 211053.png" alt="Custom CNN Training Results" width="800"/>
+<img src="Screensort/summary_2.png" alt="Custom CNN Training Results" width="800"/>
 
 This model will be used as a **baseline** for comparison with the next model.
 
@@ -145,7 +145,7 @@ The next step will be to train an improved model and compare its performance aga
 
 ### Model Parameters And Summary
 
-<img src="Screensort/summary_2.png" alt="Custom CNN Training Results" width="800"/>
+<img src="Screensort/day3_cnn.png" alt="Custom CNN Training Results" width="800"/>
 
 - Total Parameters: `5,631,169`
 - Trainable Parameters: `5,631,169`
