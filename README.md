@@ -165,3 +165,116 @@ The next step will be to train an improved model and compare its performance aga
 ### Key Takeaway
 
 > Not every experiment is performed to achieve the best result. Some experiments are performed to understand what works, what does not work, and why.
+
+## Day 4 — Model Training, Evaluation & Resource Optimization
+**(17-09-2026)**
+
+### 🚀 Overview
+
+Day 4 focused on training and evaluating **Model 3** of the Dog and Cat Classifier.
+
+During the training process, I encountered a major computational limitation while using Google Colab. The initial training setup required several hours for a single epoch, making multi-epoch training impractical.
+
+Instead of stopping the experiment, I explored an alternative training environment and moved the training workflow to **Kaggle Notebook**, where I was able to access a **T4 × 2 GPU configuration**.
+
+I also experimented with the model architecture and training configuration to improve the learning behavior of the CNN.
+
+---
+
+# 1. 🖥️ Computational Resource Limitation
+
+The dataset contains approximately:
+
+- **25,000 images**
+- Approximately **809 MB**
+- Binary classification: **Dog vs Cat**
+- Input image size: **224 × 224 × 3**
+
+During the initial training process on Google Colab, the model required approximately **3–4 hours per epoch**.
+
+This made training for multiple epochs impractical within the available runtime.
+
+### Problem
+- Google collab was taking so much time for just one epoch due to initial overhead so i turned to kaggle notebook and transferred  all things there.
+<img src="Screensort/Execution_time_collab.png" alt="Custom CNN Training Results" width="800"/> 
+
+```text
+Large Dataset
+     ↓
+Custom CNN
+     ↓
+Large Number of Parameters
+     ↓
+Very Long Training Time
+     ↓
+Limited Runtime
+```
+
+# Solution:
+
+```text
+Google Colab
+     ↓
+Resource limitation
+     ↓
+Dataset packaged into ZIP
+     ↓
+Google Drive
+     ↓
+Kaggle Notebook
+     ↓
+T4 × 2 GPU
+     ↓
+Training
+```
+
+## Model _ 3 architecture:
+```text
+Input
+224 × 224 × 3
+      ↓
+Conv2D — 32 filters
+      ↓
+MaxPooling2D
+      ↓
+Conv2D — 64 filters
+      ↓
+MaxPooling2D
+      ↓
+Conv2D — 128 filters
+      ↓
+MaxPooling2D
+      ↓
+Conv2D — 256 filters
+      ↓
+Flatten
+      ↓
+Dropout
+      ↓
+Dense — 64
+      ↓
+Dense — 32
+      ↓
+Dense — 16
+      ↓
+Dense — 1
+      ↓
+Sigmoid
+      ↓
+Dog / Cat
+```
+## Model Summary:
+<img src="Screensort/model_3summary.png" alt="Custom CNN Training Results" width="800"/>
+<video src="Screensort/Screen Recording 2026-09-17 134254.mp4" controls width="700">This shows the no of epochs</video>
+## Model Result and Graphs:
+<img src="Screensort/model_3metrics.png" alt="Custom CNN Training Results" width="800"/>
+<img src="Screensort/model_3summary.png" alt="Custom CNN Training Results" width="800"/>
+<img src = "Screensort/confusionMatrix3.png" alt = "confusion Matrix" width = "800"/>
+## What I used :
+ -> Early Stopping and Model checkpoints callback to efficiently use the compute resource and get me the best output.  
+ -> SGD optimizer with learning rate of 0.01.  
+ -> LeakyReLu  Activation function to prevent dying ReLu problem.
+## What next:
+  - I will move with pretrained models so as to get better accuracy and prevent overfitting.
+## Learning :
+  - Increasing Epochs or Changing some values does not make any big changes taking every step after thinking is important.
