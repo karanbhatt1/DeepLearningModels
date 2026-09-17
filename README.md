@@ -264,17 +264,29 @@ Sigmoid
 Dog / Cat
 ```
 ## Model Summary:
+
 <img src="Screensort/model_3summary.png" alt="Custom CNN Training Results" width="800"/>
+
+### Video:
+
 <video src="Screensort/Screen Recording 2026-09-17 134254.mp4" controls width="700">This shows the no of epochs</video>
+
 ## Model Result and Graphs:
+
 <img src="Screensort/model_3metrics.png" alt="Custom CNN Training Results" width="800"/>
 <img src="Screensort/model_3summary.png" alt="Custom CNN Training Results" width="800"/>
 <img src = "Screensort/confusionMatrix3.png" alt = "confusion Matrix" width = "800"/>
+
 ## What I used :
+
  -> Early Stopping and Model checkpoints callback to efficiently use the compute resource and get me the best output.  
  -> SGD optimizer with learning rate of 0.01.  
- -> LeakyReLu  Activation function to prevent dying ReLu problem.
+ -> LeakyReLu  Activation function to prevent dying ReLu problem.  
+
 ## What next:
+
   - I will move with pretrained models so as to get better accuracy and prevent overfitting.
+
 ## Learning :
+
   - Increasing Epochs or Changing some values does not make any big changes taking every step after thinking is important.
