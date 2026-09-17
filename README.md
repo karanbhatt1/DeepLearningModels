@@ -137,8 +137,6 @@ The next step will be to train an improved model and compare its performance aga
 
 4. **Experimental Result:** The model did not learn effectively and remained around `50%` training and validation accuracy after 10 epochs. This indicated that the model was approximately performing random classification on the balanced dataset.
 
-<img src="Screensort/day3_cnn.png" alt="Custom CNN Training Results" width="800"/>
-
 5. **Important Learning:** Adding a technique that is intended to improve a model does not automatically make the model better. Regularization needs to be applied appropriately. This experiment helped me understand that some experiments are performed not only to achieve better accuracy, but also to understand how different techniques affect model learning.
 
 ### Model 2 Architecture
@@ -154,7 +152,7 @@ The next step will be to train an improved model and compare its performance aga
 - Non-trainable Parameters: `0`
 
 ### Model 2 Result
-
+<img src="Screensort/Screenshot 2026-09-14 225943.png" alt="Custom CNN Training Results" width="800"/>
 - Training Accuracy: approximately `50%`
 - Validation Accuracy: `50%`
 - The model failed to learn meaningful patterns during the experiment.
