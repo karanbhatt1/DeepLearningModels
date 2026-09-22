@@ -290,3 +290,121 @@ Dog / Cat
 ## Learning :
 
   - Increasing Epochs or Changing some values does not make any big changes taking every step after thinking is important.
+
+
+# Day 5 - Transfer Learning, Model Comparison & Final Evaluation  [22-09-26]
+
+Today, I started learning and working with **pretrained models** to improve the accuracy and efficiency of my Dog & Cat Classification project.
+
+I worked with two lightweight and efficient pretrained architectures:
+
+* **EfficientNetB0**
+* **MobileNet**
+
+## Model Comparison
+
+### EfficientNetB0
+
+I first experimented with **EfficientNetB0**. Although the data pipeline was working correctly and the model architecture was properly configured, the model was not learning as expected.
+
+The accuracy showed very limited improvement and was not increasing significantly during training. This helped me understand that even when the data pipeline and architecture appear to be correct, a model may still not perform well due to factors such as training configuration, preprocessing, or other model-specific considerations.
+
+### MobileNet
+
+I then experimented with **MobileNet**, which showed a significant improvement compared to EfficientNetB0.
+
+The model achieved approximately **98% accuracy**, along with strong:
+
+* Precision
+* Recall
+* F1-Score
+
+This made MobileNet the final pretrained model I decided to use for this project.
+
+## Creating a Separate Test Dataset
+
+For the final evaluation, I created a **new test dataset** by downloading images from the internet.
+
+I manually worked on the dataset by
+
+
+* Collecting images from different sources
+* Cleaning the dataset
+* Removing unsuitable or irrelevant images
+* Organizing the images into the required class folders
+* Using the dataset to evaluate the model on previously unseen images
+* I collected total of 246 Images of Cat and 243 Dog images for testing purpose.
+  
+The purpose of creating a separate test dataset was to evaluate how the trained model performs on images that were not part of the training or validation process.
+
+## What I Learned From This Project
+
+This project taught me much more than simply building a CNN model.
+
+Throughout the project, I learned and practically worked with several important concepts in **Deep Learning and Model Evaluation**, including:
+
+### 1. Overfitting and Underfitting
+-> Overfitting -When model performs very well in training process but not so good during testing process is termed as Overfitting where the model is just mugging up not actually learning the weights and biases of model properly.
+
+-> Underfitting - When the model performs not so well on training data as well as on unseen test data is called underfitting.
+
+I learned how a model can perform very well on training data but fail to generalize to unseen data, and how insufficient learning can result in underfitting.
+
+### 2. Dataset Splitting
+
+I learned why datasets are divided into:
+* Training data
+* Validation data
+* Test data
+
+and how each of them serves a different purpose during model development and evaluation.
+
+### 3. Evaluation Metrics
+
+One of the most important things I learned is that **accuracy alone is not enough** to evaluate a classification model.
+
+I learned about:
+
+* Accuracy - How accurately does the model predicts the cases of both classes. It's the most basic metrics and we must not rely only on accuracy in classification problems.
+* Precision - It tells out of all positive predicted cases how many cases are actually correct.
+* Recall - It is also called True Positive Rate and it tell's out of all positive cases exist how many model actually predicted positive.
+* F1-Score - It is harmonic mean of precision and recall.
+* True Positives (TP) - The actual and predicted values are of positive classes.
+* True Negatives (TN) - The actual and predicted values are of negative classes.
+* False Positives (FP) - The negative classes which has been falsely predicted as positive by model.
+* False Negatives (FN) - These are positive case which has been falsely predicted as negative by model.
+
+I also learned why different evaluation metrics are important depending on the problem we are solving.
+
+### 4. Confusion Matrix
+
+I learned what a **Confusion Matrix** represents and how it helps us understand the actual predictions made by a classification model.
+
+I also learned how values such as TP, TN, FP, and FN are obtained from model predictions and how these values are used to calculate precision, recall, and F1-score.
+
+### 5. Handling Resource Limitations
+
+While working with a large image dataset, I faced practical limitations related to:
+
+* RAM
+* Storage
+* GPU computation
+* Training time
+
+This taught me how to work around resource limitations and make better use of available computing resources.
+
+### 6. Working With Pretrained Models
+
+I learned how pretrained models such as **EfficientNetB0 and MobileNet** can be used for computer vision tasks and how different architectures can behave differently even when working with the same dataset.
+
+## Final Reflection
+
+This is the final model I am training for this project, and I have learned a lot throughout the entire process.
+
+What started as a simple **Dog & Cat Classification project** turned into a practical learning experience covering:
+
+**CNN → Training → Validation → Overfitting & Underfitting → Dataset Splitting → Transfer Learning → Resource Management → Confusion Matrix → Classification Report → Precision → Recall → F1-Score → Model Evaluation**
+
+The biggest takeaway for me is that **building a machine learning model is not only about achieving high accuracy**. Understanding how the model performs, where it makes mistakes, and which evaluation metrics properly describe its performance is equally important.
+
+I am looking forward to learning more and improving my skills by working on more **Deep Learning and Computer Vision projects**. 🚀
